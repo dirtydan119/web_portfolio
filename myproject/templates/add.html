@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron">
+  <h1>add page</h1>
+  <form class="" method="post">
+    {{form.hidden_tag()}}
+    {{form.symbol.label()}}{{form.symbol()}}
+    {{form.price_pur.label()}}{{form.price_pur()}}
+    {{form.amount.label()}}{{form.amount()}}
+    {{form.submit1()}}
+  </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,340 @@
+{% extends "base.html" %}
+{% block content %}
+
+<br>
+<br>
+<div class="smaller-text">
+  <p></p>
+  <div class="container">
+    <div class="jumbotron my-curr-jumbo">
+      <div class="center-text">
+        <h1>Currency Conversion App</h1>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-2">
+
+          </div>
+          <div class="col-8">
+            {% if currency and amount %}
+              <h4>Currently converting {{amount}} {{currency}}</h4>
+            {% else %}
+              <p>In this app you can get up to date conversions for any of the currencies in the drop down box. Select your currency and enter an amount to get the exact conversions for the top 13 traded currencies in the world. You will also have access to detailed breakdowns and graphs on the performance of the selected currency compared to the US Dollar. This app was made with <a href="https://exchangeratesapi.io/">Exchange rates API</a>.</p>
+            {% endif %}
+          </div>
+          <div class="col-2">
+
+          </div>
+        </div>
+      <br>
+      <form method="post">
+        {{form.hidden_tag()}}
+        {{form.currency.label}} {{form.currency}}
+        {{form.amount.label}} {{form.amount}}
+        {{form.submit()}}
+      </form>
+      </div>
+    <p></p>
+    {% if currency and amount %}
+    <div class="row">
+      <div class="col-6">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Currency</th>
+              <th scope="col">From {{amount}} {{currency}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in all_currencies if all_currencies and item in desired_currencies %}
+            <tr>
+              <td>{{desired_currencies[item]}}, {{item}}</td>
+              <td>{{"{:,.2f}".format((json_object["rates"][item]* float_amount)|round(2))}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="col-6">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>{{currency}}/US Dollar % Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">24 hr</th>
+              {% if change_24 > 0 %}
+              <td><img src="static/pics/up-arrow.png" alt="" style="height:16px; width:16px;" class="arrow-center"> {{change_24}}%</td>
+              {% else %}
+              <td><img src="static/pics/down-arrow.png" alt="" style="height:16px; width:16px;" class="arrow-center"> {{change_24}}%</td>
+              {% endif %}
+            </tr>
+            <tr>
+              <th scope="row">7 day</th>
+              {% if change_7 > 0 %}
+              <td><img src="static/pics/up-arrow.png" alt="" style="height:16px; width:16px;" class="arrow-center"> {{change_7}}%</td>
+              {% else %}
+              <td><img src="static/pics/down-arrow.png" alt="" style="height:16px; width:16px;" class="arrow-center"> {{change_7}}%</td>
+              {% endif %}
+            </tr>
+            <tr>
+              <th scope="row">30 day</th>
+              {% if change_30 > 0 %}
+              <td><img src="static/pics/up-arrow.png" alt="" style="height:16px; width:16px;" class="arrow-center"> {{change_30}}%</td>
+              {% else %}
+              <td><img src="static/pics/down-arrow.png" alt="" style="height:16px; width:16px;" class="arrow-center"> {{change_30}}%</td>
+              {% endif %}
+            </tr>
+            <tr>
+              <th scope="row">90 day</th>
+              {% if change_90 > 0 %}
+              <td><img src="static/pics/up-arrow.png" alt="" style="height:16px; width:16px;" class="arrow-center"> {{change_90}}%</td>
+              {% else %}
+              <td><img src="static/pics/down-arrow.png" alt="" style="height:16px; width:16px;" class="arrow-center"> {{change_90}}%</td>
+              {% endif %}
+            </tr>
+            <tr>
+              <th scope="row">180 day</th>
+              {% if change_180 > 0 %}
+              <td><img src="static/pics/up-arrow.png" alt="" style="height:16px; width:16px;" class="arrow-center"> {{change_180}}%</td>
+              {% else %}
+              <td><img src="static/pics/down-arrow.png" alt="" style="height:16px; width:16px;" class="arrow-center"> {{change_180}}%</td>
+              {% endif %}
+            </tr>
+          </tbody>
+        </table>
+        <p><i>*Last closing date's rate is being used to calculate these percentages</i></p>
+        <p></p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">{{currency}}/USD</th>
+              <th scope="col">Last 30 Days</th>
+              <th scope="col">Last 90 Days</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">High</th>
+              <td>{{high_30}}</td>
+              <td>{{high_90}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Low</th>
+              <td>{{low_30}}</td>
+              <td>{{low_90}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Average</th>
+              <td>{{avg_30}}</td>
+              <td>{{avg_90}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Volitility</th>
+              <td>{{vol_30}}</td>
+              <td>{{vol_90}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <p></p>
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col" class="hist_data">Historical Data - <i>graphs comparing to USD</i></th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+
+
+        <button type="button" class="btn btn-graph" data-toggle="modal" data-target="#exampleModal14" id={{currency}} onclick="getChart2020chartjs(this.id)">
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id={{item}}> -->
+          2020
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal14" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">2020 Price Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <canvas id="myChart2020" width="400" height="400"></canvas>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-graph" data-toggle="modal" data-target="#exampleModal13" id={{currency}} onclick="getChart2019chartjs(this.id)">
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id={{item}}> -->
+          2019
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal13" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">2019 Price Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <canvas id="myChart2019" width="400" height="400"></canvas>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-graph" data-toggle="modal" data-target="#exampleModal12" id={{currency}} onclick="getChart2018chartjs(this.id)">
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id={{item}}> -->
+          2018
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">2018 Price Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <canvas id="myChart2018" width="400" height="400"></canvas>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-graph" data-toggle="modal" data-target="#exampleModal11" id={{currency}} onclick="getChart2017chartjs(this.id)">
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id={{item}}> -->
+          2017
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">2017 Price Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <canvas id="myChart2017" width="400" height="400"></canvas>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-graph" data-toggle="modal" data-target="#exampleModal10" id={{currency}} onclick="getChart2016chartjs(this.id)">
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id={{item}}> -->
+          2016
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">2016 Price Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <canvas id="myChart2016" width="400" height="400"></canvas>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-graph" data-toggle="modal" data-target="#exampleModal9" id={{currency}} onclick="getChart2015chartjs(this.id)">
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id={{item}}> -->
+          2015
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">2015 Price Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <canvas id="myChart2015" width="400" height="400"></canvas>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-graph" data-toggle="modal" data-target="#exampleModal8" id={{currency}} onclick="getChart2014chartjs(this.id)">
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id={{item}}> -->
+          2014
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">2014 Price Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <canvas id="myChart2014" width="400" height="400"></canvas>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <p></p>
+    {% else %}
+    <p></p>
+    {% endif %}
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,72 @@
+h1 {
+  text-align: center;
+}
+
+h3 {
+  font-size: 30px;
+  text-align: center;
+}
+
+
+table {
+    margin: 0 auto;
+}
+
+
+/* REAL SHIT */
+td {
+
+
+  border: 5px solid black;
+  border-style: solid;
+  border-radius: 200px;
+  height: 205px;
+  width: 205px;
+  padding: 0px;
+  text-align: center;
+  background-color: #3d3316;
+
+}
+
+.moleOn {
+  background: url("pics/new_mole.png");
+  border: 5px solid black;
+  border-style: solid;
+  border-radius: 200px;
+  height: 205px;
+  width: 205px;
+  padding: 0px;
+  text-align: center;
+  background-color: #3d3316;
+}
+
+.moleOff {
+  border: 5px solid black;
+  border-style: solid;
+  border-radius: 200px;
+  height: 205px;
+  width: 205px;
+  padding: 0px;
+  text-align: center;
+  background-color: #3d3316;
+}
+
+progress[value] {
+  height: 50px;
+  width: 300px;
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: center;
+}
+
+.start {
+  text-align: center;
+}
+
+.timer {
+  text-align: center;
+}
+
+body {
+  background-color: #4cdb51;
+}

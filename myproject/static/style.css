@@ -1,0 +1,291 @@
+.my-img {
+  height: 10%;
+  width: 10%;
+}
+
+.vert-center {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+col {
+  padding: 0px!important;
+}
+
+.my-table {
+  padding: 0px;
+  /* background: #e66000!important; */
+  /* border: 2px solid #e66000!important; */
+  border-radius: 2px;
+  margin-bottom: 0px;
+}
+
+body {
+  background-color: #454d55;
+  /* font-family: 'Inconsolata', monospace; */
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px!important;
+  /* background-image: url("https://www.transparenttextures.com/patterns/black-paper.png"); */
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.about-me-section {
+  background-color: #454d55;
+}
+
+.light-text {
+  color: #fcfcfc;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.center-text {
+  text-align: center;
+}
+
+table {
+  margin-bottom: 0px;
+}
+
+.my-image2 {
+  height: 50px;
+  max-width: 50px;
+}
+
+.navbar {
+  /* background-color: transparent!important; */
+  background-color: #f5f5f5!important;
+  /* position: absolute; */
+  top: 0px;
+}
+
+.homepage-images {
+  max-width:100%;
+  height:auto;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.orange {
+  background: #f5f5f5;
+  /* background: #8d97a1; */
+}
+
+#one {
+  color: black;
+}
+
+#one:hover {
+  /* color: #e66000; */
+  text-shadow: 1px 1px 3px black;
+}
+
+.skill-images {
+  width:100px;
+  height:100px;
+  object-fit: scale-down;
+}
+
+.btn {
+  border: 2px solid black;
+  color: black;
+}
+
+.btn:hover {
+  background: black;
+  color: #f5f5f5;
+}
+
+.btn-graph {
+  border: 2px solid black!important
+  color: black;
+}
+
+.btn-graph:hover {
+  background: black;
+  color: #f5f5f5;
+}
+
+.btn-clear {
+  border: 2px solid #dc3545!important;
+  color: #dc3545!important;
+}
+
+.btn-clear:hover {
+  background: #dc3545;
+  color: white!important;
+}
+
+.btn-add-help {
+  border: 2px solid #f5f5f5;
+  color: #f5f5f5;
+}
+
+.btn-add-help:hover {
+  background: #f5f5f5;
+  color: black;
+}
+
+/* .my-countainer {
+  width: 50%;
+} */
+
+.my-name {
+  /* font-size: 55px; */
+  display: inline;
+  text-shadow: 1px 1px black;
+}
+
+.my-info {
+  font-size: 16px;
+}
+
+.here {
+  color: black;
+}
+
+.my-info2 {
+  margin-bottom: 2px!important;
+}
+
+/* .my-links a:hover {
+  text-shadow: 1px 1px 3px black;
+  color: black;
+} */
+
+.my-links {
+  padding-bottom: 3px;
+}
+
+li a {
+  font-size: 20px;
+}
+
+.card {
+  background: #454d55;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  cursor: pointer;
+}
+
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card-info {
+  font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.card-button {
+  color: black;
+  border: 1px solid black!important;
+  font-family: 'Source Sans Pro', sans-serif;
+  background: #e66000;
+}
+
+.my-cards {
+  text-align: center;
+  display: inline;
+}
+
+.sans-pro {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.black-section {
+  background: black;
+  padding: 50px;
+}
+
+.top-bar {
+  background: #fcfcfc;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.top-bar p {
+  margin-bottom: 0px;
+  display: inline-block;
+}
+ .my-command-line {
+   font-size: 20px;
+   border-radius: 2px;
+   font-family: 'Inconsolata', monospace;
+ }
+
+ .alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+
+.crypto-page {
+  background-color: #454d55!important;
+}
+
+.login-link {
+  /* color: black; */
+}
+
+.my-login {
+  background: #454d55!important;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.table-dark td {
+  /* border-top: 1px solid #e66000!important; */
+}
+
+.table-dark thead th {
+  /* border: 1px #e66000!important; */
+}
+
+.hist_data {
+  border-bottom: None!important;
+  padding-bottom: 0px!important;
+}
+
+.arrow-center {
+  margin-top: auto!important;
+  margin-bottom: auto!important;
+  vertical-align: baseline!important;
+}
+
+.smaller-text {
+  font-size: 15px;
+}
+
+.my-curr-jumbo {
+  padding-top: 32px;
+  background: #f5f5f5!important
+}
+
+.my-projects-a:hover {
+  text-decoration: none;
+  color: #fcfcfc;
+}
+
+.medium-text {
+  font-size: 19px;
+}
+
+/* @keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+} */
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Amatic SC', cursive; */
+/* font-family: 'Inconsolata', monospace; */
+/* font-family: 'Source Sans Pro', sans-serif; */
