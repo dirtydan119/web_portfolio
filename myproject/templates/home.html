@@ -5,7 +5,7 @@
 <br>
 <div class="container-fluid top-container" style="max-width: 1000px;">
   <div class="medium-text">
-    <div class="light-text">
+    <!-- <div class="light-text">
       <h3 class="center-text">Crypto Portfolio</h3>
       <br>
       <br>
@@ -20,7 +20,55 @@
             <h5 class="align-right">Total Portfolio Profit: <span style="color: green;">{{ "${:,.2f}".format(((total_portfolio_value) - (total_investment))|round(2)) }}</span></h5>
           {% endif %}
       {% endif %}
+    </div> -->
+    <div class="light-text">
+      <h3 class="center-text">Crypto Portfolio</h3>
+      <p class="center-text">Add or Delete coins below to start tracking your profits</p>
+      <br>
+      <br>
     </div>
+    <div class="row">
+      <div class="col-3">
+
+      </div>
+      <div class="col-4">
+
+      </div>
+      <div class="col-5">
+        <div class="my-table">
+          <table class="table table-dark shadow-sm my-table">
+            <tbody>
+              {% if total_investment %}
+              <tr>
+                <th scope="row">Total Portfolio Cost:</th>
+                <td>{{ "${:,.2f}".format((total_investment)|round(2)) }}</td>
+              </tr>
+              {% endif %}
+              {% if total_portfolio_value %}
+              <tr>
+                <th scope="row">Current Value:</th>
+                <td>{{ "${:,.2f}".format((total_portfolio_value)|round(2)) }}</td>
+              </tr>
+                {% if ((total_portfolio_value)|round(2)) - ((total_investment)|round(2)) < 0 %}
+                <tr>
+                  <th scope="row">Total Portfolio Profit:</th>
+                  <td><span style="color: red;">{{ "${:,.2f}".format(((total_portfolio_value) - (total_investment))|round(2)) }}</span></td>
+                </tr>
+                {% else %}
+                <tr>
+                  <th scope="row">Total Portfolio Profit:</th>
+                  <td><span style="color: green;">{{ "${:,.2f}".format(((total_portfolio_value) - (total_investment))|round(2)) }}</span></td>
+                </tr>
+                {% endif %}
+              {% endif %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
 
 
 

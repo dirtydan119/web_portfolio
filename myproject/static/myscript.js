@@ -129,6 +129,181 @@ setInterval(() => {
 //    alert('More than 960');
 // }
 
+
+
+
+// var request = new XMLHttpRequest();
+// // request.open('GET', "https://api.exchangeratesapi.io/history?start_at=2020-01-01&end_at=2020-12-31&symbols=GBP,EUR,CHF,CAD,RUB,JPY,NZD,ZAR,AUD&base=USD", true)
+// request.open('GET', "https://api.exchangeratesapi.io/history?start_at=2020-01-01&end_at=2020-12-31&symbols=USD&base=" + clicked, true)
+// var new_dates = [];
+// var my_ordered_dates = [];
+// var my_prices = [];
+// var reduced_ordered_dates = [];
+// var my_dates = [];
+// request.onload = function () {
+//
+//   // Begin accessing JSON data here
+//   var data = JSON.parse(this.response)
+//
+//   for (x in data.rates) {
+//     md = x.split("-")
+//     modified_date = Number(md[0]+md[1]+md[2])
+//     new_dates.push(modified_date)
+//     // console.log(modified_date)
+//   }
+//
+//   new_dates.sort(function(a,b) {
+//     return (a) - (b);
+//   })
+//
+//   for (x in new_dates) {
+//     od = new_dates[x].toString();
+//     // console.log(od)
+//     ordered_date = od.slice(0,4) + "-" + od.slice(4,6) + "-" + od.slice(6,8)
+//     my_ordered_dates.push(ordered_date)
+//   }
+//
+//   for (let x = 0; x < my_ordered_dates.length; x+=15) {
+//     reduced_ordered_dates.push(my_ordered_dates[x])
+//   }
+//
+//   // for (z in my_ordered_dates) {
+//   //   my_prices.push(data.rates[my_ordered_dates[z]][clicked])
+//   // }
+//
+//   for (z in reduced_ordered_dates) {
+//     my_prices.push(data.rates[reduced_ordered_dates[z]]["USD"])
+//   }
+//
+//   for (x in reduced_ordered_dates) {
+//     nd = reduced_ordered_dates[x]
+//     new_date = nd.slice(5,7) + "/" + nd.slice(8,10)
+//     my_dates.push(new_date)
+//   }
+//
+//
+// }
+//
+//
+// // Send request
+// request.send()
+//
+// var ctx = document.getElementById('myChart2020').getContext('2d');
+// var myChart = new Chart(ctx, {
+//     type: 'line',
+//     data: {
+//         labels: my_dates,
+//         datasets: [{
+//             label: "Value per 1 USD",
+//             data: my_prices,
+//             borderColor: [
+//                 'rgba(255, 99, 132, 1)'
+//             ],
+//             borderWidth: 2,
+//             pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+//         }],
+//         fill: false
+//     },
+//     options: {
+//         scales: {
+//             yAxes: [{
+//                 ticks: {
+//                     beginAtZero: false
+//                 }
+//             }]
+//         }
+//     }
+// });
+
+
+
+
+function getChart2021chartjs(clicked) {
+  var request = new XMLHttpRequest();
+  // request.open('GET', "https://api.exchangeratesapi.io/history?start_at=2020-01-01&end_at=2020-12-31&symbols=GBP,EUR,CHF,CAD,RUB,JPY,NZD,ZAR,AUD&base=USD", true)
+  request.open('GET', "https://api.exchangeratesapi.io/history?start_at=2021-01-01&end_at=2021-12-31&symbols=USD&base=" + clicked, true)
+  var new_dates = [];
+  var my_ordered_dates = [];
+  var my_prices = [];
+  var reduced_ordered_dates = [];
+  var my_dates = [];
+  request.onload = function () {
+
+    // Begin accessing JSON data here
+    var data = JSON.parse(this.response)
+
+    for (x in data.rates) {
+      md = x.split("-")
+      modified_date = Number(md[0]+md[1]+md[2])
+      new_dates.push(modified_date)
+      // console.log(modified_date)
+    }
+
+    new_dates.sort(function(a,b) {
+      return (a) - (b);
+    })
+
+    for (x in new_dates) {
+      od = new_dates[x].toString();
+      // console.log(od)
+      ordered_date = od.slice(0,4) + "-" + od.slice(4,6) + "-" + od.slice(6,8)
+      my_ordered_dates.push(ordered_date)
+    }
+
+    for (let x = 0; x < my_ordered_dates.length; x+=5) {
+      reduced_ordered_dates.push(my_ordered_dates[x])
+    }
+
+    // for (z in my_ordered_dates) {
+    //   my_prices.push(data.rates[my_ordered_dates[z]][clicked])
+    // }
+
+    for (z in reduced_ordered_dates) {
+      my_prices.push(data.rates[reduced_ordered_dates[z]]["USD"])
+    }
+
+    for (x in reduced_ordered_dates) {
+      nd = reduced_ordered_dates[x]
+      new_date = nd.slice(5,7) + "/" + nd.slice(8,10)
+      my_dates.push(new_date)
+    }
+
+
+  }
+
+
+  // Send request
+  request.send()
+
+  var ctx = document.getElementById('myChart2021').getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+          labels: my_dates,
+          datasets: [{
+              label: "Value per 1 USD",
+              data: my_prices,
+              borderColor: [
+                  'rgba(255, 99, 132, 1)'
+              ],
+              borderWidth: 2,
+              pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+          }],
+          fill: false
+      },
+      options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero: false
+                  }
+              }]
+          }
+      }
+  });
+
+}
+
 function getChart2020chartjs(clicked) {
   var request = new XMLHttpRequest();
   // request.open('GET', "https://api.exchangeratesapi.io/history?start_at=2020-01-01&end_at=2020-12-31&symbols=GBP,EUR,CHF,CAD,RUB,JPY,NZD,ZAR,AUD&base=USD", true)

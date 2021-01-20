@@ -141,6 +141,7 @@
         </div>
       </div>
     </div>
+    </div>
 
 
 
@@ -173,11 +174,91 @@
     <br>
     <!-- <h4 class="center-text"><u>Projects</u></h4> -->
     <br>
-    <div class="card-deck">
+    <!-- <div class="justify-content-center">
+      <div class="row">
+        <div class="col">
+          {% if current_user.is_authenticated %}
+          <a href="{{url_for('home')}}" class="my-projects-a">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="static/pics/crypto_app.png" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text light-text card-info">Crypto Currency Portfolio App</p>
+              </div>
+            </div>
+          </a>
+          {% else %}
+          <a href="{{url_for('register')}}" class="my-projects-a">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="static/pics/crypto_app.png" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text light-text card-info">Crypto Currency Portfolio App</p>
+              </div>
+            </div>
+          </a>
+          {% endif %}
+        </div>
+        <div class="col">
+          <a href="https://www.wellingtonwineconsulting.com/" class="my-projects-a">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="static/pics/wwc1.PNG" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text light-text card-info">Wellington Wine Consulting</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="{{url_for('currency_conversion')}}" class="my-projects-a">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="static/pics/curr_convert1.png" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text light-text card-info">Forex Conversion App</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="{{url_for('medical_demo')}}" class="my-projects-a">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="static/pics/med-demo.png" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text light-text card-info">Demo Medical Website</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="container">
+      <h2 class="center-text"><b class="my-name">Websites</b></h2>
+      <br>
+      <div class="card-deck justify-content-center">
+        <a href="https://www.wellingtonwineconsulting.com/" class="my-projects-a">
+          <div class="card shadow-lg" style="width: 18rem; height:15rem;">
+            <img class="card-img-top" src="static/pics/wwc1.PNG" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text light-text card-info">Wellington Wine Consulting</p>
+            </div>
+          </div>
+        </a>
+        <a href="{{url_for('medical_demo')}}" class="my-projects-a">
+          <div class="card shadow-lg" style="width: 18rem; height:15rem;">
+            <img class="card-img-top" src="static/pics/med-demo.png" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text light-text card-info">Medical Website (Demo)</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <br>
+      <h2 class="center-text"><b class="my-name">Web Apps</b></h2>
+      <br>
+      <div class="card-deck justify-content-center">
         {% if current_user.is_authenticated %}
         <a href="{{url_for('home')}}" class="my-projects-a">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="static/pics/crypto_app.png" alt="Card image cap">
+          <div class="card shadow-lg" style="width: 18rem; height:15rem;">
+            <img class="card-img-top" src="static/pics/cryptoapp2.png" alt="Card image cap">
             <div class="card-body">
               <p class="card-text light-text card-info">Crypto Currency Portfolio App</p>
             </div>
@@ -185,42 +266,27 @@
         </a>
         {% else %}
         <a href="{{url_for('register')}}" class="my-projects-a">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="static/pics/crypto_app.png" alt="Card image cap">
+          <div class="card shadow-lg" style="width: 18rem; height:15rem;">
+            <img class="card-img-top" src="static/pics/cryptoapp2.png" alt="Card image cap">
             <div class="card-body">
               <p class="card-text light-text card-info">Crypto Currency Portfolio App</p>
             </div>
           </div>
         </a>
         {% endif %}
-
-        <a href="https://www.wellingtonwineconsulting.com/" class="my-projects-a">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="static/pics/wwc1.PNG" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text light-text card-info">Wellington Wine Consulting</p>
-            </div>
-          </div>
-        </a>
-
-        <!-- <a href="{{url_for('whack_a_mole')}}" class="my-projects-a">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="static/pics/wam.png" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text light-text card-info">Whack a Mole</p>
-            </div>
-          </div>
-        </a> -->
-
         <a href="{{url_for('currency_conversion')}}" class="my-projects-a">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="static/pics/curr_convert1.png" alt="Card image cap">
+          <div class="card shadow-lg" style="width: 18rem; height:15rem;">
+            <img class="card-img-top" src="static/pics/forex_app.png" alt="Card image cap">
             <div class="card-body">
               <p class="card-text light-text card-info">Forex Conversion App</p>
             </div>
           </div>
         </a>
+      </div>
+      <br>
     </div>
+
+
 
     <!-- <div class="row">
       <div class="col">
@@ -252,7 +318,7 @@
         </div>
       </div>
     </div> -->
-  </div>
+
   <br>
 
   <br>
@@ -261,9 +327,9 @@
 <div class="center-text my-info light-text">
   <h5 class="my-info2"><u><i>Info</i></u></h5>
   <div class="my-links">
-    <a href="mailto:djrodriguez119@gmail.com"><img src="static/pics/email3.png" alt="" style="height: 22px; width: 22px;"></a>
-    <a href="https://www.linkedin.com/in/daniel-james-rodriguez/"><img src="static/pics/linkedin.png" alt="" style="height: 22px; width: 22px;"></a>
-    <a href="https://github.com/dirtydan119"><img src="static/pics/github2.png" alt="" style="height: 22px; width: 22px;"></a>
+    <a href="mailto:djrodriguez119@gmail.com"><img src="static/pics/email3.png" alt="" style="height: 22px; width: 22px;" class="inflate"></a>
+    <a href="https://www.linkedin.com/in/daniel-james-rodriguez/"><img src="static/pics/linkedin2.png" alt="" style="height: 22px; width: 22px;" class="inflate"></a>
+    <a href="https://github.com/dirtydan119"><img src="static/pics/github2.png" alt="" style="height: 22px; width: 22px;" class="inflate"></a>
   </div>
   <p class="my-info2">(561) 847-0446</p>
   <p class="my-info2">Orlando, FL</p>

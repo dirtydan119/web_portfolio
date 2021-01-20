@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Medical Group</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style-med-demo.css">
+  </head>
+  <body>
+
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header bg-danger" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left bg-danger text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <i class="bi bi-info-circle" style="padding-right:6px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
+                    <circle cx="8" cy="4.5" r="1"/>
+                </svg>
+              </i>
+              Covid-19 Inoformation
+            </button>
+          </h2>
+        </div>
+        <div id="collapseOne" class="collapse bg-danger text-white" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Get information on saftey and protocols</p>
+            <a href="#" style="padding-right:7px;" class="text-white"><u>CDC Guidelines</u></a><a href="#" class="text-white"><u>More Info</u></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="white-back">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light top-navbar">
+        <!-- <a href="#">
+          <img src="static/pics/logo1.png" width="20%" height="20%" alt="" loading="lazy" class="d-inline-block align-top">
+        </a> -->
+        <a class="navbar-brand" href="#">
+          <img src="static/pics/logo2.png" class="img-fluid" alt="">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Care Providers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Physicians Directory</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="navsearch">Search</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+
+    <div class="blue-back">
+      <br>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col vert-center text-center">
+            <h2 class="text-white"><i>Physician Care to Feel Whole</i></h2>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <button type="button" class="btn btn-outline-light btn-lg">
+              <i class="bi bi-telephone-outbound-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-outbound-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+              </i>Call Us
+            </button>
+            <button type="button" class="btn btn-outline-light btn-lg">
+              <i class="bi bi-calendar2-event">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-event" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
+                  <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                </svg>
+              </i>
+              Request Appointment
+            </button>
+          </div>
+          <div class="col vert-center text-center">
+            <img src="static/pics/doctor1.jpg" alt="" class="img-fluid image1 shadow">
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+    </div>
+
+    <div class="white-back">
+      <br>
+      <div class="center-text">
+        <br>
+        <br>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <img src="static/pics/rod-of-asclepius.png" alt="" class="img-fluid image2 shadow">
+              <p></p>
+              <p><a href="#" class="black-links">Case Management</a></p>
+              <p class="light-text">Some text that is about one or two sentences long. This would be about the length and space for a second sentence.</p>
+            </div>
+            <div class="col">
+              <img src="static/pics/overdose.png" alt="" class="img-fluid image2 shadow">
+              <p></p>
+              <p><a href="#" class="black-links">Prescription Medication</a></p>
+              <p class="light-text">Some text that is about one or two sentences long. This would be about the length and space for a second sentence.</p>
+            </div>
+            <div class="col">
+              <img src="static/pics/stethoscope.png" alt="" class="img-fluid image2 shadow">
+              <p></p>
+              <p><a href="#" class="black-links">Patient Care</a></p>
+              <p class="light-text">Some text that is about one or two sentences long. This would be about the length and space for a second sentence.</p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+              <img src="static/pics/medical-pack.png" alt="" class="img-fluid image2 shadow">
+              <p></p>
+              <p><a href="#" class="black-links">Therapy</a></p>
+              <p class="light-text">Some text that is about one or two sentences long. This would be about the length and space for a second sentence.</p>
+            </div>
+            <div class="col">
+              <img src="static/pics/arm-bandage.png" alt="" class="img-fluid image2 shadow">
+              <p></p>
+              <p><a href="#" class="black-links">Insurance</a></p>
+              <p class="light-text">Some text that is about one or two sentences long. This would be about the length and space for a second sentence.</p>
+            </div>
+            <div class="col">
+              <img src="static/pics/caduceus.png" alt="" class="img-fluid image2 shadow">
+              <p></p>
+              <p><a href="#" class="black-links">Billing</a></p>
+              <p class="light-text">Some text that is about one or two sentences long. This would be about the length and space for a second sentence.</p>
+            </div>
+          </div>
+          <br>
+          <br>
+          <br>
+          <h5>Find more information on the physicians within the group</h5>
+          <br>
+          <button type="button" name="button" class="btn btn-success btn-lg my-doc-button image2 shadow">Physician Directory</button>
+        </div>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+
+    <div class="blue-back">
+      <br>
+      <div class="center-text">
+        <br>
+        <h3 class="text-white">Find a Healthcare Center</h3>
+        <br>
+        <div class="container">
+          <form>
+            <div class="form-group row justify-content-center">
+              <div class="col-sm-8">
+                <input type="password" class="form-control form-control-lg shadow zip-input" id="inputPassword" placeholder="Enter Zip Code">
+              </div>
+              <button type="submit" class="btn btn-outline-light btn-lg">
+                <i class="bi bi-search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                    <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                  </svg>
+                </i>
+                Search
+              </button>
+            </div>
+          </form>
+
+
+          <br>
+          <br>
+          <button type="button" name="button" class="btn btn-outline-light btn-lg">View All Locations</button>
+        </div>
+      </div>
+      <br>
+      <br>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="white-back">
+      <div class="container text-center">
+        <br>
+        <br>
+        <img src="static/pics/doctor-patient.jpg" alt="" class="img-fluid image4 shadow">
+        <br>
+        <br>
+        <h3>We put our patients well being above everything else</h3>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <br>
+        <div class="center-text">
+          <button type="button" name="button" class="btn btn-success btn-lg my-about-buttons image2 shadow">Leadership</button>
+          <button type="button" name="button" class="btn btn-success btn-lg my-about-buttons image2 shadow">Resources</button>
+        </div>
+        <br>
+        <br>
+      </div>
+    </div>
+
+    <div class="blue-back">
+      <br>
+      <div class="container">
+        <br>
+        <div class="row">
+          <div class="col vert-center text-center">
+            <h3 class="text-white">Meet Our Providers</h3>
+            <br>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <br>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div class="col vert-center text-center">
+            <img src="static/pics/doctor.jpg" alt="" class="img-fluid image1 shadow">
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+    </div>
+
+    <div class="white-back">
+      <br>
+      <br>
+      <br>
+      <div class="container">
+        <table class="table">
+          <!-- <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead> -->
+          <tbody>
+            <tr>
+              <th scope="row"><img src="static/pics/avatar1.PNG" class="rounded-circle doc-photo shadow" alt="Cinque Terre"></th>
+              <td>Maria Thomas, MD <br> <i>Primary Care</i></td>
+              <td>West Palm Beach, FL</td>
+              <td><button type="button" name="button" class="btn btn-success btn my-about-buttons image2 shadow">View Profile</button></td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="static/pics/avatar2.PNG" class="rounded-circle doc-photo shadow" alt="Cinque Terre"></th>
+              <td>Jacob Williams, MD <br> <i>Orthopedics</i></td>
+              <td>Boca Raton, FL</td>
+              <td><button type="button" name="button" class="btn btn-success btn my-about-buttons image2 shadow">View Profile</button></td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="static/pics/avatar3.PNG" class="rounded-circle doc-photo shadow" alt="Cinque Terre"></th>
+              <td>Samantha Kindley, DO <br> <i>Internal Medicine</i></td>
+              <td>Delray Beach, FL</td>
+              <td><button type="button" name="button" class="btn btn-success btn my-about-buttons image2 shadow">View Profile</button></td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="static/pics/avatar4.PNG" class="rounded-circle doc-photo shadow" alt="Cinque Terre"></th>
+              <td>Mark Mathis, MD <br> <i>Gastroenterology</i></td>
+              <td>Lake Worth, FL</td>
+              <td><button type="button" name="button" class="btn btn-success btn my-about-buttons image2 shadow">View Profile</button></td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="static/pics/avatar5.PNG" class="rounded-circle doc-photo shadow" alt="Cinque Terre"></th>
+              <td>Sherry Luchi, DO <br> <i>Proctology</i></td>
+              <td>Deerfield Beach, FL</td>
+              <td><button type="button" name="button" class="btn btn-success btn my-about-buttons image2 shadow">View Profile</button></td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="static/pics/avatar6.PNG" class="rounded-circle doc-photo shadow" alt="Cinque Terre"></th>
+              <td>Denise Smith, ARNP <br> <i>Primary Care</i></td>
+              <td>Pompano Beach, FL</td>
+              <td><button type="button" name="button" class="btn btn-success btn my-about-buttons image2 shadow">View Profile</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br>
+      <br>
+    </div>
+
+    <div class="blue-back">
+      <br>
+      <br>
+      <div class="container">
+          <div class="vert-center center-text">
+            <h3 class="text-white">We'd love to hear from you!</h3>
+            <br>
+            <h5 class="text-white">Call Us - (407) 555-6358</h3>
+            <br>
+            <p class="text-white">Fill out the form below to let us know how we can assist you. If you would like more information, please give us a call and we’ll be happy to help.</p>
+            <!-- <button type="button" class="btn btn-outline-light btn-lg">
+              <i class="bi bi-telephone-outbound-fill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-outbound-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+              </i>Call Us
+            </button> -->
+            <br>
+          </div>
+          <div class="container">
+            <form action="#" method="post">
+              <div class="row">
+                <div class="col-lg">
+                  {{form.hidden_tag()}}
+                  {{form.name.label(class="text-white")}}
+                  {{form.name(class="form-control form-control-lg shadow-sm", style="width: 400px;")}}
+                  {{form.email.label(class="text-white")}}
+                  {{form.email(class="form-control form-control-lg shadow-sm", style="width: 400px;")}}
+                  {{form.phone_number.label(class="text-white")}}
+                  {{form.phone_number(class="form-control form-control-lg shadow-sm", style="width: 400px;")}}
+                </div>
+                <div class="col-lg">
+                  <div class="form-group">
+                      {{form.text.label(class="text-white")}}
+                      {{form.text(class="form-control form-control-lg shadow-sm", style="height: 175px;")}}
+                  </div>
+                </div>
+              </div>
+              <br>
+               <div class="form-group">
+                   {{form.submit(class="btn btn-outline-light btn-lg")}}
+               </div>
+            </form>
+            <br>
+            <br>
+          </div>
+      </div>
+    </div>
+
+    <!-- <div class="white-back">
+      <br>
+      <br>
+      <div class="container">
+        <form action="#" method="post">
+          <div class="row">
+            <div class="col-lg">
+              {{form.hidden_tag()}}
+              {{form.name.label()}}
+              {{form.name(class="form-control form-control-lg shadow-sm", style="width: 400px;")}}
+              {{form.email.label()}}
+              {{form.email(class="form-control form-control-lg shadow-sm", style="width: 400px;")}}
+              {{form.phone_number.label()}}
+              {{form.phone_number(class="form-control form-control-lg shadow-sm", style="width: 400px;")}}
+            </div>
+            <div class="col-lg">
+              <div class="form-group">
+                  {{form.text.label()}}
+                  {{form.text(class="form-control form-control-lg shadow-sm", style="height: 175px;")}}
+              </div>
+            </div>
+          </div>
+          <br>
+           <div class="form-group">
+               {{form.submit(class="btn btn-success btn-lg my-doc-button image2 shadow")}}
+           </div>
+        </form>
+        <br>
+        <br>
+      </div>
+    </div> -->
+
+    <!-- <div class="blue-back">
+      <br>
+      <br>
+      <div class="container">
+        <div class="quote-carousel">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <br>
+                <p class="center-text text-white quote-text"><i>Finally a doctor's office that actually cares about their patients and their well being!</i></p>
+                <p class="center-text text-white quote-text">-Meredith T. ~ Patient</p>
+                <br>
+              </div>
+              <div class="carousel-item">
+                <br>
+                <p class="center-text text-white quote-text"><i>Utilizing the services from Physician Care Centers has allowed our practice to grow and take the next step.</i></p>
+                <p class="center-text text-white quote-text">-Tammy L. ~ Practice Manager</p>
+                <br>
+              </div>
+              <div class="carousel-item">
+                <br>
+                <p class="center-text text-white quote-text"><i>This is a third quote here to take up space. This would be a second sentence in the quote.</i></p>
+                <p class="center-text text-white quote-text">-Example Name ~ Patient</p>
+                <br>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+    </div> -->
+
+
+
+
+    <div class="white-back">
+      <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-3 vert-center">
+          <img src="static/pics/logo3.png" class="img-fluid navbar-brand" alt="">
+        </div>
+        <div class="col-9 vert-center">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link bottom-nav-links" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bottom-nav-links" href="#">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bottom-nav-links" href="#">Leadership</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bottom-nav-links" href="#">Careers</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr style="height:1px;border-width:0;color:black;background-color:black;opacity:0.5;">
+      <div class="row">
+        <div class="col-5">
+          <a href="#"><img src="static/pics/facebook.png" alt="" class="social-icons image3"></a>
+          <a href="#"><img src="static/pics/twitter.png" alt="" class="social-icons image3"></a>
+          <a href="#"><img src="static/pics/linkedin2.png" alt="" class="social-icons image3"></a>
+          <a href="#"><img src="static/pics/instagram.png" alt=""class="social-icons image3"></a>
+          <a href="#"><img src="static/pics/youtube.png" alt="" class="social-icons image3"></a>
+          <p class="info-text light-text">(407) 555-9729</p>
+          <p class="info-text light-text">contact.familyfirst@gmail.com</p>
+          <p class="info-text light-text">17734 Orange Ave, West Palm Beach, FL 33423</p>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    </body>
+  </html>
