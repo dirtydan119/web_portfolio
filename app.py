@@ -272,6 +272,11 @@ def medical_demo():
     form = ContactForm()
     return render_template("medical_demo.html", form=form)
 
+@app.route("/restaurant_demo_page")
+def restaurant_demo():
+    form = ContactForm()
+    return render_template("restaurant_demo.html", form=form)
+
 @app.route("/currency_conversion", methods=["GET", "POST"])
 def currency_conversion():
     desired_currencies = {"USD": "US Dollar", "EUR": "Euro", "CAD": "Canadian Dollar", "GBP": "Brittish Pound", "CNY": "Chinese Renminbi", "HKD": "Hong Kong Dollar", "AUD": "Australian Dollar", "CHF": "Swiss Franc", "RUB": "Russian Ruble", "JPY": "Japanese Yen", "NZD": "New Zeland Dollar", "ZAR": "South African Rand", "KRW": "South Korean Won", "SEK": "Swedish Krona"}
